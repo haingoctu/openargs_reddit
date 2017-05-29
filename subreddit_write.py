@@ -42,8 +42,8 @@ def postToSub(entry):
         return None
 
 ##grab the last modified date from last check##
-def readLastModified():
-    path ='/home/hai/PythonWorkspace/openargs/lastModified.txt'
+def readLastModified(lastModifiedFile):
+    path = lastModifiedFile
     pl = pathlib.Path(path)
     if not pl.is_file():
         open(path,  'a').close()
@@ -89,7 +89,7 @@ def getSiteLink():
 
 ##main##
 logging.info('starting openargs')
-old_rss = readLastModified()
+old_rss = readLastModified(lastModifiedFile)
 if not(old_rss):
     rss = feedparser.parse(config.RSS_SITE)
 else:
