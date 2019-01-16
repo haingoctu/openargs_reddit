@@ -1,6 +1,6 @@
 # openargs_reddit
 Polls postcast's *.libsyn.com rss feed, and the update link to openargs subreddit.
-Currently running on r/openargs
+Currently running on r/openargs.
 
 
 To Use for your own subreddit:
